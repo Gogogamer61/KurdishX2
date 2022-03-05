@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from temple.cx/buy/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Mar 2022 21:43:01 GMT -->
+<head>
+<title>Purchase</title>
+<style>
+			body {
+				margin: 0; 
+				background: #fdfdfd;
+				font-family: 'Segoe UI Light', Helvetica, sans-serif;
+			}
+			.area {
+				box-shadow: 0px 0px 5px rgba(0,0,0,.5);
+				border-radius: 6px;
+				background: #fff;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				position: absolute;
+				padding: 20px;
+				width: 300px;
+				height: 450px;
+			}
+			.selector {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				
+			}
+			.page {
+				width: 100%;
+				height: 100%;
+				display: inline-block;
+				vertical-align: top;
+				white-space: normal;
+			}
+			#scroller {
+				height: 100%;
+				width: 100%;
+				overflow: visible;
+				white-space: nowrap; 
+				transition: left 0.4s;
+				left: 0;
+				position: relative;
+			}
+			.flex {
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			a {
+				user-select: none;
+			}
+			.buttons {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				width: 100%;
+				margin-top: 20px;
+			}
+			.buttons > a {
+				width: 100%;
+				height: 45px;
+				text-align: center;
+				border-top: 1px solid rgba(0,0,0,.2);
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				transition: background 0.3s;
+			}
+			.buttons > a:hover {
+				background: rgba(0,0,0,.05);
+			}
+			.buttons > a:active {
+				background: rgba(0,0,0,.1);
+			}
+			.buttons > a:last-of-type {
+				border-bottom: 1px solid rgba(0,0,0,.2);
+			}
+			.buttons > a > * {
+				width: 100%;
+				
+			}
+		</style>
+<script>
+			let moveto = i => {
+				let Scroller = document.getElementById("scroller");
+				if (i != 'main') {
+					Scroller.style.left = `-${document.getElementById("payment").offsetLeft}px`;
+					document.getElementById("payment").children.forEach(e=>{
+						e.style.display = "none";
+					});
+					document.getElementById(i).style.display = undefined;
+				} else {
+					Scroller.style.left = `0px`;
+				}
+			};
+			window.addEventListener('hashchange', ()=>hashchanged(window.location.hash));
+		</script>
+</head>
+<body>
+<div class="area">
+<div class="selector">
+<div id="scroller">
+<div class="page" id="main">
+<div class="flex">
+<span style="font-size: 30px; margin-top: 10px">Purchase Temple</span>
+<div class="buttons">
+<a onclick="moveto('paypal')"><span>Pay with Paypal</span></a>
+</div>
+</div>
+</div>
+<div class="page" id="payment">
+<div class="flex" id="paypal">
+<span style="font-size: 30px; margin-top: 10px">Pay with PayPal</span>
+<span style="font-size: 15px; margin-top: 20px; text-align: center; background:rgba(255, 206, 99, .6); border: 1px solid rgba(255, 206, 99, 1); padding: 3px">Please be aware when paying with paypal the product key will be sent to your <b>PayPal Email Address</b>.</span>
+<span style="font-size: 15px; margin-top: 20px; text-align: center; background:rgba(255, 0, 0, .2); border: 1px solid rgba(255, 0, 0, 1); padding: 3px">Ensure <b>mail.temple.cx</b> is added to your
+emails safe sender list or the email may not be delivered.</span>
+<span style="font-size: 15px; margin-top: 20px; text-align: center; background:rgba(255, 0, 0, .2); border: 1px solid rgba(255, 0, 0, 1); padding: 3px">Paypal is currently disabled</span>
+<span style="font-size: 15px; margin-top: 20px; text-align: center; padding: 3px">1 Temple Lifetime Key (GBP9.99)</span>
+<div style="flex-grow: 2"></div>
+<span style="font-size: 30px;">GBP9.99</span>
+<a onclick="moveto('main')">Other Payment Methods</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+
+<!-- Mirrored from temple.cx/buy/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Mar 2022 21:43:01 GMT -->
+</html>

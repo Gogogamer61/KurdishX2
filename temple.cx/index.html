@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from temple.cx/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Mar 2022 21:42:56 GMT -->
+<head>
+<title>Temple</title>
+
+
+
+<meta charset="UTF-8">
+<meta name="description" content="Kurdish X, the fastest script execution environment in the universe! Kurdish X exploits state of the art optimization techniques to deliver the quickest and easiest execution of scripts.">
+<meta name="keywords" content="Kurdish, Exploit, Fast Execution, Fast Injection, Fastest, Best, lego">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="temple.css">
+<style>
+		
+            .octo {
+                transform-style: preserve-3d;
+                transition: transform 0.25s;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                overflow:visible;
+				will-change: transform;
+            }
+            .octo_small {
+                --tw: 10px !important;
+                --th: 17.32px !important;
+                --nw: -10px !important;
+                --nh: -14.22px !important;
+                --tym:-3.2px !important;
+            }
+			@keyframes octorot {
+				0% {
+					transform: rotateY(0deg);
+				}
+				100% {
+					transform: rotateY(360deg);
+				}
+			}
+			.octo_button {
+				transform: translateZ(0);
+				will-change: transform;
+			}
+            .octo_button:hover {
+                transform: rotateY(90deg);
+            }
+            .octo_button:active {
+                transform: rotateY(100deg) rotateZ(-15deg) scale(1.1);
+            }
+            .octo > div {
+                
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 var(--tw) var(--th) var(--tw);
+                border-color: transparent transparent #303030 transparent;
+                position: absolute;
+                left: var(--nw);
+                top: var(--nh);
+				transition: border-color 0.5s;
+				box-shadow: inset 0px 0px 10px #000;
+				will-change: transform, border-color;
+            }
+            .octo > .b {
+                transform-origin: bottom;
+            }
+            .octo > .t {
+                transform-origin: top;
+            }
+            .octo > .s {
+                border-color: transparent transparent #373737 transparent;
+            }
+			.octo:hover > .s {
+                border-color: transparent transparent #303030 transparent !important;
+            }
+			.octo:hover > div {
+                border-color: transparent transparent #373737 transparent !important;
+            }
+			.fadingObject {
+				opacity: 0;
+				transform: translateY(5vh);
+				transition: opacity 0.7s ease-in-out, transform 1.3s ease-out;
+				visibility: hidden;
+			}
+			.fadingObject.inView {
+				opacity: 1;
+				transform: none;
+				visibility: visible;
+			}
+			.featureGrid {
+				display: grid;
+				justify-content: center;
+				align-items: center;
+			}
+			@media (min-width: 400px) {
+				.featureGrid {
+					grid-template-columns: repeat(1, 400px);
+				}
+			}
+			@media (min-width: 800px) {
+				.featureGrid {
+					grid-template-columns: repeat(2, 400px);
+				}
+			}
+			@media (min-width: 1200px) {
+				.featureGrid {
+					grid-template-columns: repeat(3, 400px);
+				}
+			}
+			.feature {
+				padding: 45px;
+			}
+			.feature > .featureContent {
+				display: flex;
+				flex-direction: column;
+			}
+			.feature > .featureContent > .title {
+				font-size: 170%;
+				margin-bottom: 12px;
+				text-align: center;
+			}
+			.feature > .featureContent > .description {
+				text-align: center;
+			}
+			.boxShadowBlack {
+				box-shadow: 0px 0px 5px 0px rgba(0,0,0,.9);
+			}
+			#footer > div {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				position: relative;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			#footer > div > * {
+				margin-left: 15px;
+				margin-right: 15px;
+			}
+			#footer > div > span > a {
+				color: #fff;
+				text-decoration: underline rgba(255,255,255,0.3) solid;
+				text-decoration-thickness: 1px;
+			}
+		</style>
+<script>
+			function newinstance(tag, parent, classname, attr) {
+				let d = document.createElement(tag);
+				d.className = classname == null ? "" : classname;
+				if (attr != null) 
+					for (let [i,v] of Object.entries(attr))
+						d[i]=v;
+				if (parent != null) parent.appendChild(d);
+				return d;
+			}
+			let destroy = (e) => e.parentNode.removeChild(e);
+			let removeclass = (e, c) => e.className = e.className.split(' ').filter(i => i !== c).join(' ');
+
+			let div = (parent, classname, attr) => newinstance("div", parent, classname, attr);
+			let span = (parent, classname, attr) => newinstance("span", parent, classname, attr);
+			let a = (parent, classname, attr) => newinstance("a", parent, classname, attr);
+			let pre = (parent, classname, attr) => newinstance("pre", parent, classname, attr);
+			let input = (parent, classname, attr) => newinstance("input", classname, attr);
+
+			let style = (styles) => {
+				let tag = newinstance("style", document.head);
+				tag.textContent = styles;
+				return tag;
+			}
+
+			let getelement = (id) => document.getElementById(id);
+
+			let isofclass = (e, c) => (e.className.split(" ")).includes(c);
+			let addclass = (e, c) => isofclass(e, c) ? false : e.className += ` ${c}`;
+
+			let toggleclass = (e, c) => isofclass(e, c) ? removeclass(e, c) : addclass(e, c);
+		</script>
+<script>
+			function toggleSidebar() {
+				let sidebar = document.getElementById("sidebar");
+				sidebar.className = sidebar.className == "sidebar-open" ? "" : "sidebar-open";
+			}
+			let doc = document.documentElement;
+			window.addEventListener("mousedown", e=>sidebar.className = e.clientX > sidebar.clientWidth ? "" : sidebar.className);
+			
+			let ScrollCallback = ()=>{
+				let FadeElements = document.getElementsByClassName("fadingObject");
+				let LowerBound = window.scrollY + window.innerHeight;
+				let TempleBG = document.getElementById("templebg");
+				TempleBG.style.filter = `blur(${window.scrollY-window.innerHeight < 0 ? 0 + ((window.scrollY/window.innerHeight)*25.0) : 0}px) grayscale(${(window.scrollY/(window.innerHeight*2))})`;
+				
+				for (let i = 0; i < FadeElements.length; i++) {
+					let v = FadeElements[i];
+					let ObjectBound = ((v.getBoundingClientRect().top)+window.scrollY) + v.clientHeight/2;
+					if (ObjectBound <= LowerBound) 
+						addclass(v, "inView");
+					else if (ObjectBound - v.clientHeight > LowerBound)
+						removeclass(v, "inView");
+				}
+				getelement("c0tooltip").style.transform = `translateZ(${30+window.scrollY/2.5}px)`;
+				getelement("c1").style.transform = `translateZ(${20+window.scrollY/3}px)`;
+				getelement("c2").style.transform = `translateZ(${Math.max(window.scrollY/4 - 25, 0)}px)`;
+				getelement("c3").style.transform = `translateZ(-${Math.max(window.scrollY/4 - 25, 0)}px)`;
+				getelement("c4").style.transform = `translateZ(-${20 + window.scrollY/3}px)`;
+			};
+			window.addEventListener("load", ScrollCallback);
+			window.addEventListener("scroll", ScrollCallback);
+		</script>
+<style>
+			@keyframes rot {
+				50%{
+					transform: rotate3d(1,0,1, 45deg);
+				}
+			}
+			#code {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				width: 586px;
+				height: 336px;
+				transform: translate(-50%, -50%) scale(1.75) perspective(1000px) translateZ(-500px) rotateX(34deg) rotateY(46deg) rotateZ(-32deg);
+				transform-origin: 50% 50%;
+				transform-style: preserve-3d;
+				transition: transform 0.1s;
+			}
+			@keyframes fin {
+				0% {
+					opacity: 0;
+				}
+			}
+			@keyframes hueRotate {
+				50% {
+					filter: hue-rotate(-70deg);
+				}
+			}
+			.ca {
+				position: absolute;
+				left: 0;
+				top: 0;
+				transform: translateZ(25px);
+				transition: transform 1s;
+				animation: fin 2s;
+				transform-style: preserve-3d;
+				user-select: none;
+			}
+			#c0tooltip {
+				transform: translateZ(100px);
+			}
+			#c1 {
+				transform: translateZ(80px);
+			}
+			#c2 {
+				transform: translateZ(0px);
+				animation: fin 6s, hueRotate 10s infinite;
+			}
+			#c3 {
+				transform: translateZ(0px);
+				animation: fin 6s, hueRotate 10s infinite;
+			}
+			#c4 {
+				transform: translateZ(-80px);
+			}
+		</style>
+</head>
+<body>
+<div class="pagefullsize page" id="templebg" style="z-index: -1; filter: blur(0px); height: calc(100vh + 100px); position: absolute; left: 0px; top: 0px;background: url(bg.jpg); background-size: cover; background-position: center;"></div>
+<div id="main" style="background: transparent;">
+<div id="content">
+<div class="page pageflex" style="height: 100vh;transform-style: preserve-3d;">
+<div id="code" class="fadingObject">
+<img id="c0tooltip" class="ca" style="left: 244px; top: 198px;" src="Tooltip.png"></img>
+<img id="c1" class="ca" src="Temple.png"></img>
+<img id="c2" class="ca" src="bruh1.png"></img>
+<img id="c3" class="ca" src="bruh2.png"></img>
+<img id="c4" class="ca" src="bruh3.png"></img>
+</div>
+<span id="title" style="text-shadow: 0px 0px 5px rgba(0,0,0,0.8);" class="fadingObject">Kurdish X</span>
+<span id="bottomtext" style="text-shadow: 0px 0px 5px rgba(0,0,0,0.8);" class="fadingObject">Erase the competition with the most powerful scripting environment yet.</span>
+</div>
+<div style="width:100%; overflow:hidden; height: 70px;">
+<div style="background: transparent; width:0;height:0px;border-left:100vw solid transparent;border-top:0px solid transparent;border-right:0px solid transparent; border-bottom: 70px solid #e0e0e0"></div>
+</div>
+<div class="page" style="color: #000; background: #e0e0e0; padding-top: 70px; padding-bottom: 90px;">
+<div id="about" class="header fadingObject"><span>Features</span></div>
+<div class="featureGrid">
+<div class="feature fadingObject">
+<div class="featureContent">
+<span class="title">Realtime Error Checking</span>
+<span class="description">The Kurdish X UI checks for syntax errors in realtime, allowing Temple to be a suitable IDE for developing scripts.</span>
+</div>
+</div>
+<div class="feature fadingObject">
+<div class="featureContent">
+<span class="title">Advanced Customization</span>
+<span class="description">Every part of Kurdish X can be customized with a simple theme file.</span>
+</div>
+</div>
+<div class="feature fadingObject">
+<div class="featureContent">
+<span class="title">Lightning Fast Speed</span>
+<span class="description">Kurdish X boasts <b>instant inject speeds</b> and <b>instant execute</b>, so you can get back to exploiting instead of waiting around.</span>
+</div>
+</div>
+<div class="feature fadingObject">
+<div class="featureContent">
+<span class="title">Custom Functions</span>
+<span class="description">Kurdish X includes many custom implemented functions to expand your scripting capabilities.</span>
+</div>
+</div>
+<div class="feature fadingObject">
+<div class="featureContent">
+<span class="title">Fully Featured IDE</span>
+<span class="description">Kurdish X contains the most advanced Lua IDE ever seen, including the best Lua syntax highlighter making Temple suitable for developing scripts.</span>
+</div>
+</div>
+<div class="feature fadingObject">
+<div class="featureContent">
+<span class="title">Forged with Divine Intellect</span>
+<span class="description">Kronix and Berzerker have spoken with God, temporarily ascending to a higher plane of existence seeking knowledge to create Temple.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="page" style="color: #000; background: #dadada; padding-top: 70px; padding-bottom: 90px;">
+<div class="header fadingObject"><span>Advanced Code Analysis</span></div>
+<div class="smalltext fadingObject"><span>Temple is equipped with an advanced code analyser to help you script easily</span></div>
+<div class="smalltext fadingObject"><span>It provides informative tooltips and intellisense suggestions while you are coding!</span></div>
+</div>
+<div class="page" style="color: #000; background: #e0e0e0; padding-top: 70px; padding-bottom: 90px;">
+<div class="header fadingObject"><span>Powerful Lua IDE</span></div>
+<div style="display: flex; flex-direction: row; align-items: center; margin-right: auto; flex-wrap: no-wrap; width: 1200px; margin-left: auto;">
+<img class="boxShadowBlack fadingObject" src="Temple.png"></img>
+<div style="display: flex; flex-direction: column; margin-left: 35px; min-height: 300px">
+<span class="fadingObject" style="font-size: 35px; white-space: nowrap">The most advanced Lua IDE ever seen.</span>
+<ul class="featureul fadingObject">
+<li>Realtime Error Checking</li>
+<li>Theme Support</li>
+<li>Syntax Highlighting</li>
+<li>File Explorer</li>
+<li>Advanced Local Highlighting</li>
+<li>Informative Code Tooltips</li>
+<li>Resizable Controls</li>
+<li>Intellisense</li>
+</ul>
+<span class="fadingObject"></span>
+</div>
+</div>
+</div>
+
+<div class="page" style="background:#dadada; color:#000; padding-top: 70px; padding-bottom: 90px; align-items: center;display: flex; flex-direction: column;">
+<div id="contact" class="header fadingObject"><span>Contact</span></div>
+<div style="display: flex; flex-direction: column; align-items: center; margin-right: auto; flex-wrap: wrap; margin-left: auto;">
+<span class="fadingObject">To contact us please <a href="discord/index.html" style="text-decoration:none">join the discord</a> we will be happy to help you with any of your issues!</span>
+</div>
+</div>
+
+</div>
+</div>
+<div id="sidebar-button" onclick="toggleSidebar()">
+<div class="octo octo_small octo_button">
+<div class="t s" style="transform: rotateX(35.2deg)"></div>
+<div class="t" style="transform:  rotateY(90deg) rotateX(35.2deg)"></div>
+<div class="t s" style="transform: rotateY(180deg) rotateX(35.2deg)"></div>
+<div class="t" style="transform: rotateY(-90deg) rotateX(35.2deg)"></div>
+<div class="b" style="transform:  translateZ(var(--tw)) translateY(var(--tym)) rotateX(-215.5deg)"></div>
+<div class="b s" style="transform: rotateY(90deg) translateZ(var(--tw)) translateY(var(--tym)) rotateX(-215.5deg)"></div>
+<div class="b" style="transform:  rotateY(180deg) translateZ(var(--tw)) translateY(var(--tym)) rotateX(-215.5deg)"></div>
+<div class="b s" style="transform: rotateY(-90deg) translateZ(var(--tw)) translateY(var(--tym)) rotateX(-215.5deg)"></div>
+</div>
+</div>
+<div id="navbar">
+<div class="logo"></div>
+<div class="buttons">
+<a href="#"><span>home</span></a>
+<a href="#about"><span>about</span></a>
+<a href="#contact"><span>contact</span></a>
+<a href="buy/index.html"><span>purchase</span></a>
+</div>
+<a style="padding-right: 5px; padding-left: 5px" href="signup/index.html" class="navbarbutton"><span>signup</span></a>
+<a style="padding-right: 5px; padding-left: 5px" href="login/index.html" class="navbarbutton"><span>login</span></a>
+</div>
+<div id="sidebar">
+<div class="buttons">
+<a href="dash/index.html"><span>Dashboard</span></a>
+<div></div>
+<a href="buy/index.html"><span>Purchase</span></a>
+<a href="discord/index.html"><span>Discord</span></a>
+<div></div>
+<a href="tos/index.html"><span>Terms of Service</span></a>
+<a href="#contact"><span>Contact</span></a>
+</div>
+</div>
+</body>
+
+<!-- Mirrored from temple.cx/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 05 Mar 2022 21:42:59 GMT -->
+</html>
